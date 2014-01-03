@@ -8,10 +8,13 @@ window.onload = function ( ) {
         var entry = text.value;
         var addItem = document.createElement( 'li' );
         // addItem.appendChild( document.createTextNode( entry ) );
-        addItem.innerHTML = entry + ' <button class="btn delete"> delete </button>';
+        addItem.innerHTML = entry + ' <button class="btn delete"> delete </button>' + ' <button class="btn edit"> edit </button> ';
         task.appendChild( addItem );
         addItem.querySelector( '.btn.delete' ).onclick = function ( ) {
             addItem.remove( );
+        }
+        addItem.querySelector ( '.btn.edit').onclick = function() {
+        	alert();
         }
     }
     submit.onclick = addToDo;
